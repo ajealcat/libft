@@ -6,7 +6,7 @@
 /*   By: ajearuth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 12:46:20 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/05/21 14:32:42 by ajearuth         ###   ########.fr       */
+/*   Updated: 2021/05/23 14:34:32 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 
 void	ft_bzero(void *str, size_t n)
 {
-	unsigned int *tmp;
-	size_t i;
+	unsigned char	*tmp;
+	size_t			i;
 
-
-	tmp = (unsigned int)str;
+	tmp = (unsigned char *)str;
 	i = 0;
 	while (i < n)
 	{
 		*tmp = '\0';
 		++tmp;
+		++i;
 	}
 }

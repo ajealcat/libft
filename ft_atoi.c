@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 11:38:45 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/05/21 14:14:28 by ajearuth         ###   ########.fr       */
+/*   Updated: 2021/05/23 14:24:30 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int i;
-	int sign;
-	int nb;
+	unsigned int	i;
+	unsigned int	sign;
+	unsigned int	nb;
 
 	i = 0;
 	sign = 1;

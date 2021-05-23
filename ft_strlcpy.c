@@ -6,7 +6,7 @@
 /*   By: ajearuth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 11:32:45 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/05/22 11:15:17 by ajearuth         ###   ########.fr       */
+/*   Updated: 2021/05/23 14:27:45 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t dest_size)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;

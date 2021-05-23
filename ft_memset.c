@@ -6,17 +6,17 @@
 /*   By: ajearuth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 12:09:06 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/05/21 12:40:46 by ajearuth         ###   ########.fr       */
+/*   Updated: 2021/05/23 14:29:56 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
 
-void	*memset(void *str, int c, size_t len)
+void	*ft_memset(void *str, int c, size_t len)
 {
-	unsigned char *tmp;
-	size_t i;
+	unsigned char	*tmp;
+	size_t			i;
 
 	i = 0;
 	tmp = (unsigned char *)str;
@@ -26,5 +26,5 @@ void	*memset(void *str, int c, size_t len)
 		++i;
 		++tmp;
 	}
-	return(str);
+	return (str);
 }

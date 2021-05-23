@@ -6,7 +6,7 @@
 /*   By: ajearuth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 11:19:47 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/05/22 11:21:03 by ajearuth         ###   ########.fr       */
+/*   Updated: 2021/05/23 14:26:51 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strcat(char *dest, const char *src)
 {
-	size_t i;
-	size_t size;
+	size_t	i;
+	size_t	size;
 
 	size = ft_strlen(dest);
 	i = 0;
