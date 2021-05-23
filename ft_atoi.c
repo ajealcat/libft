@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 11:38:45 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/05/23 14:24:30 by ajearuth         ###   ########.fr       */
+/*   Updated: 2021/05/23 15:35:10 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 
 int	ft_atoi(const char *str)
 {
-	unsigned int	i;
-	unsigned int	sign;
-	unsigned int	nb;
+	int	i;
+	int	sign;
+	int	nb;
 
 	i = 0;
 	sign = 1;
 	nb = 0;
-	while ((str[i] > 8 && str[i] < 14) || str[i] == 32)
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
 	if (str[i] == 43 || str[i] == 45)
 	{
