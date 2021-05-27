@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/21 11:16:41 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/05/27 16:01:56 by ajearuth         ###   ########.fr       */
+/*   Created: 2021/05/25 16:49:13 by ajearuth          #+#    #+#             */
+/*   Updated: 2021/05/26 14:54:23 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+char	*ft_strrchr(const char *str, int c)
 {
-	size_t		i;
-	size_t		src_size;
-	size_t		dest_size;
+	size_t			size;
 
-	i = 0;
-	dest_size = ft_strlen(dest);
-	src_size = ft_strlen(src);
-	if (size == 0)
-		return (src_size);
-	if (size < dest_size)
-		return (src_size + size);
-	while (src[i] && (dest_size < size - 1))
+	size = ft_strlen(str);
+	if (!str)
+		return (NULL);
+	while (size + 1)
 	{
-		dest[dest_size] = src[i];
-		++i;
-		++dest_size;
+		if (str[size] == (char)c)
+			return ((char *)(str + size));
+		--size;
 	}
-	dest[dest_size] = '\0';
-	return ((dest_size - i) + src_size);
+	return (NULL);
 }

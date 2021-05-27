@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/21 11:16:41 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/05/27 16:01:56 by ajearuth         ###   ########.fr       */
+/*   Created: 2021/05/27 14:12:52 by ajearuth          #+#    #+#             */
+/*   Updated: 2021/05/27 14:33:42 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	size_t		i;
-	size_t		src_size;
-	size_t		dest_size;
+	char	*p;
+	char	*res;
 
-	i = 0;
-	dest_size = ft_strlen(dest);
-	src_size = ft_strlen(src);
-	if (size == 0)
-		return (src_size);
-	if (size < dest_size)
-		return (src_size + size);
-	while (src[i] && (dest_size < size - 1))
-	{
-		dest[dest_size] = src[i];
-		++i;
-		++dest_size;
-	}
-	dest[dest_size] = '\0';
-	return ((dest_size - i) + src_size);
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
+	if (s1 == NULL)
+		return (ft_strdup(s2));
+	if (s2 == NULL)
+		return (ft_strdup(s1));
+	res = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (res == NULL)
+		return (NULL);
+	p = res;
+	while (*s1)
+		*p++ = *s1++;
+	while (*s2)
+		*p++ = *s2++;
+	*p = '\0';
+	return (res);
 }
