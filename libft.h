@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 11:08:38 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/05/27 17:19:24 by ajearuth         ###   ########.fr       */
+/*   Updated: 2021/05/28 11:16:27 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ char	*ft_strrchr(const char *str, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_substr(char const *str, unsigned int start, size_t len);
+char	*ft_strtrim(const char *s1, const char *set);
 char	*ft_itoa(int n);
 void	ft_bzero(void *str, size_t n);
 void	*ft_memset(void *str, int c, size_t len);
