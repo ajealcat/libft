@@ -6,7 +6,7 @@
 /*   By: ajearuth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 14:17:36 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/06/04 18:01:17 by ajearuth         ###   ########.fr       */
+/*   Updated: 2021/06/04 18:33:19 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 		return (NULL);
 	i = start;
 	j = 0;
-	while (j < len && i <= ft_strlen(str))
+	while (j < len && str[i] && i < ft_strlen(str))
 	{
 		ret[j] = str[i];
 		++j;
