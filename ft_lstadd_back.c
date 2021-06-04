@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 14:17:36 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/06/02 12:18:14 by ajearuth         ###   ########.fr       */
+/*   Created: 2021/06/04 11:50:20 by ajearuth          #+#    #+#             */
+/*   Updated: 2021/06/04 12:37:08 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *str, unsigned int start, size_t len)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	char	*ret;
-	size_t	i;
-	size_t	j;
+	t_list	*tmp;
 
-	ret = (char *)malloc(sizeof(char) * len + 1);
-	if (ret == NULL || str == NULL)
-		return (NULL);
-	i = start;
-	j = 0;
-	while (str[i] && j < len && i <= ft_strlen(str))
+	tmp = *alst;
+	if (alst != NULL && *alst != NULL)
 	{
-		ret[j] = str[i];
-		++j;
-		++i;
+		while (tmp->next)
+			tmp = tmp->next;
+		tmp->next = new;
 	}
-	ret[j] = '\0';
-	return (ret);
+	else
+		*alst = new;
 }

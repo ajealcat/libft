@@ -6,7 +6,7 @@
 /*   By: ajearuth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 14:57:56 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/05/28 17:21:59 by ajearuth         ###   ########.fr       */
+/*   Updated: 2021/06/04 16:07:37 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_sizeofword(const char *str, char c)
 	int	i;
 
 	i = 0;
-	while (str[i] && str[i] == c)
+	while (str[i] && str[i] != c)
 		++i;
 	return (i);
 }
@@ -62,8 +62,8 @@ char	**ft_split(const char *str, char c)
 
 	if (str == NULL)
 		return (NULL);
-	tab = malloc(sizeof(char *) * ft_count_words(str, c) + 1);
-	if (tab == 0)
+	tab = malloc(sizeof(char *) * (ft_count_words(str, c) + 1));
+	if (tab == NULL)
 		return (NULL);
 	index = -1;
 	while (++index < ft_count_words(str, c))

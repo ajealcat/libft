@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 14:17:36 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/06/02 12:18:14 by ajearuth         ###   ########.fr       */
+/*   Created: 2021/06/04 14:35:44 by ajearuth          #+#    #+#             */
+/*   Updated: 2021/06/04 15:06:24 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *str, unsigned int start, size_t len)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	char	*ret;
-	size_t	i;
-	size_t	j;
+	t_list	*tmp;
 
-	ret = (char *)malloc(sizeof(char) * len + 1);
-	if (ret == NULL || str == NULL)
-		return (NULL);
-	i = start;
-	j = 0;
-	while (str[i] && j < len && i <= ft_strlen(str))
+	if (del == NULL)
+		return ;
+	if (lst != NULL && *lst != NULL)
 	{
-		ret[j] = str[i];
-		++j;
-		++i;
+		while (*lst)
+		{
+			tmp = (*lst)->next;
+			del((*lst)->content);
+			free(*lst);
+			*lst = tmp;
+		}
 	}
-	ret[j] = '\0';
-	return (ret);
+	lst = NULL;
 }
