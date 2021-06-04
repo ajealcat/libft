@@ -6,11 +6,19 @@
 /*   By: ajearuth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 14:17:36 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/06/02 12:18:14 by ajearuth         ###   ########.fr       */
+/*   Updated: 2021/06/04 18:01:17 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_dif(size_t len1, size_t len2)
+{
+	if (len1 < len2)
+		return (len1);
+	else
+		return (len2);
+}
 
 char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
@@ -18,12 +26,14 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	size_t	i;
 	size_t	j;
 
-	ret = (char *)malloc(sizeof(char) * len + 1);
-	if (ret == NULL || str == NULL)
+	if (str == NULL)
+		return (NULL);
+	ret = (char *)malloc(sizeof(char) * ft_dif(len, ft_strlen(str)) + 1);
+	if (ret == NULL)
 		return (NULL);
 	i = start;
 	j = 0;
-	while (str[i] && j < len && i <= ft_strlen(str))
+	while (j < len && i <= ft_strlen(str))
 	{
 		ret[j] = str[i];
 		++j;
