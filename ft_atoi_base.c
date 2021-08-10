@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajearuth <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/20 17:03:45 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/08/10 12:06:16 by ajearuth         ###   ########.fr       */
+/*   Created: 2021/08/10 13:51:18 by ajearuth          #+#    #+#             */
+/*   Updated: 2021/08/10 13:51:37 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static int	ft_checkbase(const char *base)
 	return (1);
 }
 
-int	ft_atoi_base(char *str, const char *base, int fd)
+int	ft_atoi_base(char *str, const char *base)
 {
 	int	i;
 	int	sign;
