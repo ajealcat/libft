@@ -6,7 +6,7 @@
 /*   By: ajearuth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 09:09:38 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/05/25 10:58:04 by ajearuth         ###   ########.fr       */
+/*   Updated: 2021/12/29 17:13:18 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned char	*tmp_dest;
 	unsigned char	*tmp_src;
 	unsigned char	tmp_c;
-	size_t		 	i;
+	size_t			i;
 
 	tmp_dest = (unsigned char *)dest;
 	tmp_src = (unsigned char *)src;

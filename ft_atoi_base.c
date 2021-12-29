@@ -6,13 +6,13 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 13:51:18 by ajearuth          #+#    #+#             */
-/*   Updated: 2021/08/10 13:51:37 by ajearuth         ###   ########.fr       */
+/*   Updated: 2021/12/29 17:11:32 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_printbase(char *base, char c)
+static int	ft_printbase(const char *base, char c)
 {
 	int	i;
 
